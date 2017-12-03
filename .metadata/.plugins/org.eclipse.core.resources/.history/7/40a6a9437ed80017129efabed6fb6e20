@@ -42,7 +42,7 @@ public class NetworkMdb implements MessageListener {
 					for (String ip : listNetwork.getNetworkIps()) {
 						Host host = new Host();
 						host.setIp(ip);
-						host.setStatus(PingIP.execPing(ip));
+						host.setUp(PingIP.execPing(ip));
 						networkDao.insertHost(host);
 					}
 					

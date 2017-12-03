@@ -19,7 +19,7 @@ import br.inatel.network.PingIP;
 
 @MessageDriven(activationConfig = {
 		@ActivationConfigProperty(propertyName="destinationType", propertyValue="javax.jms.Queue"),
-		@ActivationConfigProperty(propertyName="destination", propertyValue="java:/jms/queue/dm110queue"),
+		@ActivationConfigProperty(propertyName="destination", propertyValue="java:/jms/queue/projetoqueue"),
 		@ActivationConfigProperty(propertyName="maxSession", propertyValue="10")
 })
 public class NetworkMdb implements MessageListener {
@@ -42,7 +42,7 @@ public class NetworkMdb implements MessageListener {
 					for (String ip : listNetwork.getNetworkIps()) {
 						Host host = new Host();
 						host.setIp(ip);
-						host.setStatus(PingIP.execPing(ip));
+						host.setUp(PingIP.execPing(ip));
 						networkDao.insertHost(host);
 					}
 					

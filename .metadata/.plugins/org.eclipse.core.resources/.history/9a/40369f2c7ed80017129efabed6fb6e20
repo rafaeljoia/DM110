@@ -20,7 +20,7 @@ public class Host implements Serializable {
 		this.ip = ip;
 	}
 
-	public boolean getStatus() {
+	public boolean isStatus() {
 		return status;
 	}
 

@@ -29,7 +29,7 @@ public class NetworkDao {
 				.setParameter("ip", ip)
 				.getResultList()
 				.get(0)
-				.getStatus();
+				.isUp();
 		return result;
 	}
 
