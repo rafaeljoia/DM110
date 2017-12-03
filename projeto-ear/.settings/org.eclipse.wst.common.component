@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+	<wb-module deploy-name="projeto-ear">
+		<dependent-module deploy-path="/" handle="module:/resource/projeto-war/projeto-war">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/" handle="module:/resource/projeto-ejb/projeto-ejb">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/resource/projeto-api/projeto-api">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/resource/projeto-impl/projeto-impl">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/lib" handle="module:/resource/projeto-ejb-client/projeto-ejb-client">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+	</wb-module>
+</project-modules>
